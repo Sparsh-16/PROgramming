@@ -1,6 +1,6 @@
 /*
  Module:	1
- Topic:		write and explore you first program in c
+ Topic:		Tokens
  */
 
 
@@ -8,12 +8,30 @@
 
 int main() {
 
-	//my first print statement while learning c
-	//new line character is "\n".
+	/*variable : it is the memory location where a data is stored.
+	 It may change its value during the program. It is also known as Identifier in C.
 
-	printf("Hello Internshala. \n\n");
-	printf("I am learning c language.");
+	data type : it specifies the type of data that a variable can store.
+	 It determines how much memory a variable will occupy in storage.
+
+	 literals: it is a constant value.
+	 */
+
+	// Write a C program to find out the area of a circle
+	// Formula to calculate area:Pi*radius*radius
 
 
-	return 0;
+	const float PI = 3.14;
+
+	int radius = 30;
+    radius = 54;
+	float area = PI * radius * radius;
+
+    printf("The area of the circle is %.2f sq units", area);
+
+    /*constant : it is the name of the memory location where a fixed value is stored.
+    Constants do not change their values during program execution.
+    Similar to variable but with fixed value.*/
+
+    return 0;
 }
