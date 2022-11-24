@@ -1,37 +1,41 @@
 /*
  Module:	1
- Topic:		Tokens
+ Topic:		user input
  */
 
 
-#include <stdio.h>
+#include<stdio.h>
+#include<unistd.h>
 
 int main() {
 
-	/*variable : it is the memory location where a data is stored.
-	 It may change its value during the program. It is also known as Identifier in C.
+	char name[30] = "Farm House";
+	char size;
+	int personItServes;
+	float retailPrice;
 
-	data type : it specifies the type of data that a variable can store.
-	 It determines how much memory a variable will occupy in storage.
+	printf("enter the size of pizza as either 'S', 'M' or 'L': ");
+	scanf("%c", &size);
 
-	 literals: it is a constant value.
-	 */
+	printf("enter the number of persons it serves: ");
+	scanf("%d", &personItServes);
 
-	// Write a C program to find out the area of a circle
-	// Formula to calculate area:Pi*radius*radius
+	printf("enter the retail price: ");
+	scanf("%f", &retailPrice);
+
+    printf("\nGenerating message...\n");
+    usleep(3000000);
 
 
-	const float PI = 3.14;
+	printf("\nYay! You have ordered a %s pizza of"
+			" size %c that serves %d.\nPlease "
+	        "pay Rs. %.1f to the delivery person."
+			, name, size, personItServes, retailPrice);
 
-	int radius = 30;
-    radius = 54;
-	float area = PI * radius * radius;
+	printf("\n\nSending SMS...\n");
+	usleep(1000000);
 
-    printf("The area of the circle is %.2f sq units", area);
-
-    /*constant : it is the name of the memory location where a fixed value is stored.
-    Constants do not change their values during program execution.
-    Similar to variable but with fixed value.*/
+	printf("\n\n******SMS SENT******\n\n");
 
     return 0;
 }
